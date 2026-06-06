@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakia Sultana — Sito Personale</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --neutral-dark: #333333;
+            --neutral-light: #f8f9fa;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        
+        /* Navigation */
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; font-size: 1rem; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('immagini/home-hero.jpg') no-repeat center center/cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 0 1rem; }
+        .hero-content h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
+        .hero-content h2 { font-size: 1.5rem; font-weight: 300; margin-bottom: 1.5rem; color: #bdc3c7; }
+        .hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto; font-style: italic; }
+        .btn-container { display: flex; gap: 1rem; justify-content: center; }
+        .btn { padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+        .btn-primary { background: var(--accent); color: var(--white); }
+        .btn-primary:hover { background: #2980b9; }
+        .btn-secondary { border: 2px solid var(--white); color: var(--white); }
+        .btn-secondary:hover { background: var(--white); color: var(--primary); }
+
+        /* General Section Layout */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 3rem; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin: 10px auto 0 auto; }
+        
+        /* Chi Sono - Modificato align-items su 'center' per metterle in mezzo */
+        .about-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
+        .about-text p { margin-bottom: 1.5rem; font-size: 1.1rem; text-align: justify; }
+        .about-text h3 { margin-top: 2rem; margin-bottom: 0.5rem; color: var(--primary); }
+        
+        /* Colonna Immagini Verticali */
+        .about-images { display: flex; flex-direction: column; gap: 1.5rem; }
+        .about-images img { width: 100%; height: 320px; object-fit: cover; border-radius: 8px; box-shadow: 0 6px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+        .about-images img:hover { transform: scale(1.03); }
+
+        /* Passioni */
+        .passioni-intro { text-align: center; font-size: 1.2rem; max-width: 800px; margin: -1rem auto 3rem auto; font-style: italic; }
+        .passioni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .passione-card { background: var(--neutral-light); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .passione-card:hover { transform: translateY(-5px); }
+        .passione-card img { width: 100%; height: 200px; object-fit: cover; }
+        .passione-content { padding: 1.5rem; }
+        .passione-content h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.4rem; }
+        .passione-content p { font-size: 1rem; text-align: justify; }
+
+        /* Footer / Contatti */
+        footer { background: var(--primary); color: var(--white); padding: 4rem 2rem 2rem 2rem; border-top: 5px solid var(--accent); }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+        .footer-section h3 { margin-bottom: 1.5rem; font-size: 1.2rem; border-bottom: 1px solid #4f5d73; padding-bottom: 0.5rem; }
+        .footer-section p, .footer-section ul { font-size: 0.95rem; list-style: none; color: #cbd5e1; }
+        .footer-section ul li { margin-bottom: 0.8rem; }
+        .footer-section ul a { color: #cbd5e1; text-decoration: none; }
+        .footer-section ul a:hover { color: var(--accent); }
+        .footer-bottom { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #4f5d73; font-size: 0.85rem; color: #a0aec0; }
+        
+        @media (max-width: 992px) {
+            .about-container { grid-template-columns: 1fr; gap: 2rem; }
+            .about-images { flex-direction: row; }
+            .about-images img { height: 350px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-images { flex-direction: column; }
+            .about-images img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="materie.html">Materie</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. HERO DI APERTURA -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Jakia Sultana</h1>
+            <h2>Studente di Informatica — IIS "Marconi Pieralisi", Jesi</h2>
+            <p>Tra lezioni, idee e progetti, in questi cinque anni ho costruito qualcosa che racconta chi sono.</p>
+            <div class="btn-container">
+                <a href="#chi-sono" class="btn btn-primary">Scopri di più</a>
+                <a href="materie.html" class="btn btn-secondary">Le mie materie</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. CHI SONO -->
+    <section id="chi-sono">
+        <h2 class="section-title">Chi Sono</h2>
+        <div class="about-container">
+            
+            <!-- COLONNA SINISTRA: TESTO -->
+            <div class="about-text">
+                <p>Ho 20 anni e vivo a Jesi, in provincia di Ancona. Sono una persona creativa e curiosa, con una grande passione per la tecnologia e tutto ciò che permette di creare qualcosa di nuovo. Mi piace mettermi alla prova, imparare continuamente e affrontare ogni esperienza come un’occasione per crescere. In questi anni di scuola ho costruito competenze, amicizie e ricordi che porterò con me nel futuro. Credo molto nell’impegno, nella curiosità e nel valore delle persone che mi stanno accanto ogni giorno, perché sono proprio loro a dare significato ai miei obiettivi e ai miei progetti.</p>
+                
+                <h3>Il mio percorso di studi</h3>
+                <p>Dopo aver frequentato la scuola primaria e media a Jesi, ho scelto di proseguire il mio percorso all’IIS “Marconi Pieralisi”, un istituto che mi ha permesso di avvicinarmi in modo concreto al mondo della tecnologia. Nel corso degli anni ho studiato materie come programmazione, sistemi e reti, database e sviluppo software, acquisendo competenze tecniche ma anche un metodo di lavoro più organizzato.</p>
+                
+                <h3>Uno sguardo al futuro</h3>
+                <p>Oggi non ho ancora preso una decisione definitiva sul percorso che seguirò dopo il diploma, ma sto vivendo un momento di riflessione. Nel tempo è nato in me un interesse inaspettato per l’ambito dell’architettura e della progettazione, che non avevo mai considerato prima in modo così concreto. Grazie alla materia di Tecnologie e Disegno, affrontata durante il secondo anno: grazie a essa ho iniziato a sviluppare un nuovo modo di osservare gli spazi, le forme e le idee progettuali, avvicinandomi gradualmente a un settore che oggi mi affascina sempre di più. Da quella esperienza è nata una passione che si è rafforzata con il tempo, influenzando il mio modo di pensare al futuro.</p>
+            </div>
+            
+            <!-- COLONNA DESTRA: IMMAGINI CENTRATE VERTICALMENTE -->
+            <div class="about-images">
+                <img src="immagini/scuola-marconi.jpeg" alt="Istituto Marconi Pieralisi">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PASSIONI -->
+    <section id="passioni" style="background-color: #fafbfc; max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Le Mie Passioni</h2>
+            <p class="passioni-intro">Fuori dalla scuola ci sono alcune passioni che occupano una parte importante delle mie giornate e che mi rappresentano molto più di un semplice hobby.</p>
+            
+            <div class="passioni-grid">
+                <!-- Musica -->
+                <div class="passione-card">
+                    <img src="immagini/passione-musica.webp" alt="Passione Musica">
+                    <div class="passione-content">
+                        <h3>Musica</h3>
+                        <p>La musica è probabilmente la cosa più importante del mio tempo libero. Ascolto musica ogni giorno, praticamente in qualsiasi momento: mentre studio, quando sono in viaggio o semplicemente quando ho bisogno di stare tranquilla. Per me non è solo un passatempo, ma qualcosa che riesce davvero a influenzare il mio umore. Nei momenti in cui mi sento sola o un po’ giù, la musica è spesso la prima cosa che mi aiuta a stare meglio. Mi piace ascoltare generi diversi, dal rock alla musica elettronica.</p>
+                    </div>
+                </div>
+
+                <!-- Tecnologia -->
+                <div class="passione-card">
+                    
+                    <div class="passione-content">
+                        <h3>Tecnologia</h3>
+                        <p>La tecnologia è una delle passioni che mi incuriosisce di più, soprattutto nella parte creativa e grafica. Mi piace immaginare e creare progetti personali, ad esempio pensare alla grafica di un videogioco oppure progettare piccoli giochi online. Trovo interessante tutto ciò che riguarda il design digitale, le interfacce e il modo in cui un’idea può trasformarsi in qualcosa di concreto sullo schermo. Oltre a questo, mi piace scoprire nuovi programmi.</p>
+
+<img src="immagini/passione-tecnologia.jpg" alt="Passione Tecnologia">
+                    </div>
+                </div>
+
+                <!-- Viaggi -->
+                <div class="passione-card">
+                    <img src="immagini/passione-viaggi.jpg" alt="Passione Viaggi">
+                    <div class="passione-content">
+                        <h3>Viaggi</h3>
+                        <p>Mi piace molto viaggiare e visitare posti nuovi ogni volta che ne ho la possibilità. Anche un viaggio breve riesce sempre a lasciarmi qualcosa di positivo, perché permette di uscire dalla routine quotidiana e vedere ambienti diversi dal solito. Viaggiare mi fa sentire più libera, mi aiuta a conoscere nuove culture e a capire quanto il mondo sia diverso da quello che viviamo ogni giorno. I viaggi più belli rimangono quelli fatti in condivisione.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTATTI / FOOTER -->
+    <footer id="contatti">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Jakia Sultana</h3>
+                <p>Studente di Informatica presso IIS Marconi Pieralisi di Jesi. Classe 5ª CM — A.S. 2025/2026.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contatti Rapidi</h3>
+                <ul>
+                    <li><strong>Email:</strong> sjakia278@gmail.com</li>
+                    <li><strong>Residenza:</strong> Jesi (AN), Italia</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Link Utili</h3>
+                <ul>
+                    <li><a href="https://github.com/st10700-eng" target="_blank">GitHub Profilo</a></li>
+                    <li><a href="materie.html">Materie Scolastiche</a></li>
+                    <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jakia Sultana. Sviluppato per l'Esame di Stato 2025/2026. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storia — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-storia.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+
+
+        
+        .main-container { max-width: 1000px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 2rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+        
+        /* STRUTTURA FLEXBOX PER AFFIANCARE TESTO E COLONNA IMMAGINI */
+        .content-wrapper { display: flex; gap: 2.5rem; align-items: flex-start; }
+        .text-column { flex: 2; }
+        
+        /* AGGIORNATO: Gestione dello spazio verticale per ospitare le due foto a destra */
+        .image-column { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 5rem; /* Distanziamento verticale tra la foto "storia" e la foto "guerra" */
+            margin-top: 3.5rem; /* Stacca la prima foto dal titolo allineandola al testo */
+        }
+        
+        /* ALTEZZA IDENTICA E TAGLIO INTELLIGENTE PER ENTRAMBE LE FOTO */
+        .image-column img { 
+            width: 100%; 
+            height: 280px; /* Forzatura altezza identica per equilibrare il layout */
+            object-fit: cover; /* Evita distorsioni o schiacciamenti delle immagini */
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+        }
+        .image-column img:hover { transform: scale(1.03); }
+
+        /* Responsive per schermi piccoli (smartphone) */
+        @media (max-width: 768px) {
+            .content-wrapper { flex-direction: column; }
+            .image-column { flex-direction: row; gap: 1rem; margin-top: 1.5rem; width: 100%; }
+            .image-column img { flex: 1; width: 50%; height: 200px; }
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storia.html" style="color:var(--accent);">Storia</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>Storia</h1>
+        <h2>Il XX Secolo e le Grandi Trasformazioni Globali</h2>
+    </div>
+
+<div class="main-container">
+        <a href="area-umanistica.html" class="back-link">&larr; Torna indietro</a>
+
+
+    <div class="main-container">
+        <h2 class="materia-title">La Prima Guerra Mondiale (1914 - 1918)</h2>
+        
+        <!-- Contenitore unico per dividere in due colonne -->
+        <div class="content-wrapper">
+            
+            <!-- Colonna Testo (Sinistra) -->
+            <div class="text-column">
+                <p>Durante l'anno scolastico abbiamo svolto diverse attività e affrontato molti temi storici, ma lo studio della Prima Guerra Mondiale è stato senza dubbio uno degli argomenti che mi sono piaciuti di più. Mi ha colpito molto approfondire non solo le dinamiche politiche e militari, ma anche il drammatico impatto che questo conflitto ha avuto sulla società dell'epoca, segnando il passaggio definitivo verso il mondo moderno.</p>
+                
+                <h4>Le Causes e lo Scoppio del Conflitto</h4>
+                <p>Le tensioni in Europa si accumulavano da anni a causa del nazionalismo esasperato, dell'imperialismo e della corsa agli armamenti. Il continent era diviso in due grandi blocchi: la <strong>Triplice Intesa</strong> (Gran Bretagna, Francia e Russia) e la <strong>Triplice Alleanza</strong> (Germania, Impero Austro-Ungarico e Italia). La scintilla scoccò il 28 giugno 1914 a Sarajevo con l'assassinio dell'arciduca Francesco Ferdinando per mano di un nazionalista serbo, attivando una reazione a catena di dichiarazioni di guerra.</p>
+
+                <h4>La Guerra di Trincea e le Nuove Tecnologie</h4>
+                <p>Fallito il piano tedesco di una rapida "guerra di movimento", il conflitto si trasformò in una logorante guerra di posizione. Per quattro anni, milioni di soldati vissero all'interno di fossati scavati nel terreno (trincee), affrontando fango, malattie e costanti bombardamenti. La Grande Guerra fu un conflitto fortemente tecnologico, caratterizzato dall'uso di mitragliatrici, gas tossici, primi carri armati, aerei e sottomarini.</p>
+
+                <h4>La Svolta del 1917 e la Fine del Conflitto</h4>
+                <p>Il 1917 fu l'anno decisivo: la Russia si ritirò a causa della rivoluzione interna, mentre gli Stati Uniti entrarono in guerra a fianco dell'Intesa, portando un enorme rifornimento di risorse economiche e industriali. Nel 1918 le potenze centrali crollarono. L'Impero Austro-Ungarico firmò l'armistizio con l'Italia dopo la decisiva vittoria italiana a Vittorio Veneto, e l'11 novembre 1918 la Germania firmò la resa definitiva.</p>
+            </div>
+            
+            <!-- Colonna Immagini (Destra) -->
+            <div class="image-column">
+                <!-- Prima foto: storia -->
+                <img src="immagini/storia.jpg" alt="Prima Guerra Mondiale - Trincee">
+                
+                <!-- Seconda foto aggiunta: guerra -->
+                <img src="immagini/guerra.jpg" alt="Fasi del conflitto della Grande Guerra">
+            </div>
+
+        </div> <!-- Fine content-wrapper -->
+    </div>
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

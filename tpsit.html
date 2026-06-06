@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPSIT — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-tpsit.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        
+        .main-container { max-width: 1000px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 2rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ol { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.8rem; }
+        
+        .content-wrapper { display: flex; gap: 2.5rem; align-items: flex-start; }
+        .text-column { flex: 2; }
+        
+        /* AGGIORNATO: Spostato tutto il blocco giù rispetto al titolo e aumentato lo stacco interno */
+        .image-column { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 6rem; /* Aumentato a 6rem per spingere la seconda foto ancora più sotto */
+            margin-top: 3.5rem; /* Stacca la prima foto dal titolo e la allinea sotto il primo paragrafo */
+        }
+        
+        .image-column img { 
+            width: 100%; 
+            height: 280px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+        }
+        .image-column img:hover { transform: scale(1.03); }
+
+        @media (max-width: 768px) {
+            .content-wrapper { flex-direction: column; }
+            .image-column { flex-direction: row; gap: 1rem; margin-top: 1.5rem; }
+            .image-column img { flex: 1; width: 50%; height: 200px; }
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tpsit.html" style="color:var(--accent);">TPSIT</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>TPSIT</h1>
+        <h2>Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni</h2>
+    </div>
+<div class="main-container">
+        <a href="area-scientifica.html" class="back-link">&larr; Torna indietro</a>
+
+    
+    <div class="main-container">
+        <h2 class="materia-title">Evoluzione Mobile: Focus su Android 8 Oreo</h2>
+        
+        <div class="content-wrapper">
+            <div class="text-column">
+                <p>Durante l'anno abbiamo svolto diverse attività, ma l'evoluzione dei sistemi operativi mobili è uno degli argomenti che mi è piaciuto di più. Nello specifico, l'elaborato analizza Android 8, rilasciato da Google nel 2017 e storicamente noto con il nome commerciale "Oreo", seguendo la tradizione alfabetica legata ai dolci.</p>
+                <p>Il focus principale si è concentrato sull'ottimizzazione generale e sul superamento dei limiti strutturali della versione precedente, riassumibile in quattro macro-aree:</p>
+                
+                <ol>
+                    <li><strong>Prestazioni e Batteria:</strong> Android 8 ha introdotto un avvio del sistema molto più rapido e una gestione stringente dei servizi in background. Limitando i processi energetici delle app non necessarie, riduce il consumo di memoria e garantisce una maggiore durata della batteria.</li>
+                    <li><strong>Interfaccia Grafica e Personalizzazione:</strong> Il design è stato reso più pulito e minimale, arricchito da animazioni fluide. La novità estetica principale è rappresentata dalle icone adattive, capaci di uniformarsi automaticamente a forme e dimensioni diverse a seconda del launcher o del dispositivo utilizzato.</li>
+                    <li><strong>Esperienza Utente e Notifiche:</strong> Il sistema ha rivoluzionato la gestione dei flussi introducendo i canali di notifica, la funzione di snooze (per rimandarli) e i notification dots sulle icone delle app. A livello di usabilità sono state integrate funzioni fondamentali come il Picture-in-Picture e la compilazione automatica tramite Autofill.</li>
+                    <li><strong>Sicurezza del Sistema:</strong> Sul piano della protezione dati è stato introdotto Google Play Protect per il monitoraggio automatico dei malware, affiancato da un controllo più granulare dei permessi concessi alle applicazioni e da una maggiore frequenza nel rilascio delle patch di sicurezza.</li>
+                </ol>
+                <p>In conclusione, Android 8 Oreo ha rappresentato una pietra miliare nello sviluppo mobile, definendo i pilastri di efficienza e usabilità su cui poggia l'intero ecosistema Android moderno.</p>
+            </div>
+            
+            <div class="image-column">
+                <img src="immagini/oreo.jpg" alt="Logo Android 8 Oreo">
+                <img src="immagini/android.jpg" alt="Schermata Interfaccia Android Oreo">
+            </div>
+        </div>
+    </div>
+    
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

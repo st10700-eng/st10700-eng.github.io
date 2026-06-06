@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPOI — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-gpoi.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        
+        .main-container { max-width: 800px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; margin-top: 1rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 2rem 0 1rem 0; border-left: 4px solid var(--accent); padding-left: 10px; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        /* STILE DEL PULSANTE TORNA INDIETRO */
+        .back-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .back-link:hover {
+            color: var(--accent);
+            transform: translateX(-4px); /* Effetto movimento verso sinistra */
+        }
+
+        /* STILE PER LE IMMAGINI CENTRATE E LUNGHE (LOGO INIZIALE E SCOUT FINALE) */
+        .image-center-container {
+            width: 100%;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+        .image-center-container img {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gpoi.html" style="color:var(--accent);">GPOI</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="header-page">
+        <h1>GPOI</h1>
+        <h2>Gestione Progetto e Organizzazione d'Impresa</h2>
+    </div>
+
+    <div class="main-container">
+        <a href="area-scientifica.html" class="back-link">&larr; Torna alla Home</a>
+
+        <h2 class="materia-title">Pianificazione e Sviluppo del Progetto "Scout Admin"</h2>
+        
+        <div class="image-center-container">
+            <img src="immagini/logo.png" alt="Logo e Concept di Scout Admin" onerror="this.onerror=null; this.src='logo.jpg';">
+        </div>
+
+        <p>La materia di GPOI fornisce le basi metodologiche, organizzative e normative necessarie per pianificare e gestire il ciclo di vita di un software. Durante l'anno ho applicato questi principi teorici alla modellizzazione del mio progetto personale denominato <strong>Scout Admin</strong>, una piattaforma progettata per digitalizzare la gestione amministrativa ed educativa dei gruppi scout.</p>
+        
+        <h4>1. Il Contesto del Progetto (Analisi As-Is e To-Be)</h4>
+        <p>Il progetto nasce dall'analisi dei bisogni reali della struttura organizzativa scout:</p>
+        <ul>
+            <li><strong>Stato Attuale (As-Is):</strong> Gestione frammentata, inefficiente e basata su moduli cartacei, e-mail sparse e pagamenti manuali. Questo comporta un alto rischio di errore o smarrimento di dati critici come contatti di emergenza e allergie.</li>
+            <li><strong>Stato Futuro (To-Be):</strong> Introduzione di una web app cloud centralizzata che connette direzione, educatori e famiglie, riducendo del 70% il carico di lavoro burocratico dei capi unità.</li>
+        </ul>
+
+        <h4>2. Strumenti di Pianificazione e Controllo</h4>
+        <p>Per l'organizzazione del lavoro e il monitoraggio dello sviluppo sono state utilizzate le principali metodologie di Project Management previste dal programma di GPOI:</p>
+        <ul>
+            <li><strong>WBS (Work Breakdown Structure):</strong> Scomposizione gerarchica del progetto in pacchetti di lavoro elementari (Analisi, Infrastruttura, Sviluppo funzionalità Core, Integrazione pagamenti, Test e Rilascio).</li>
+            <li><strong>Matrice RACI:</strong> Assegnazione precisa dei ruoli organizzativi per ciascuna attività, definendo chi esegue (Responsible), chi approva (Accountable), chi viene consultato (Consulted) e chi informato (Informed).</li>
+            <li><strong>Diagramma di Gantt:</strong> Pianificazione temporale dello sviluppo per monitorare le scadenze, la durata delle attività e le dipendenze tra i vari moduli software.</li>
+            <li><strong>KPI (Indicatori di Successo):</strong> Indicatori numerici per misurare l'efficacia a 12 mesi, come l'accuratezza dei dati anagrafici (target >95%) e il tracciamento digitale dei pagamenti.</li>
+        </ul>
+
+        <h4>3. Gestione dei Requisiti e dei Vincoli (Scope e GDPR)</h4>
+        <p>La definizione dei confini del progetto e il rispetto delle normative vigenti sono pilastri aziendali fondamentali:</p>
+        <ul>
+            <li><strong>Perimetro (Scope Management):</strong> Per evitare ritardi, è stato definito rigidamente cosa sviluppare subito (anagrafica dei soci, iter educativo, pagamenti e gestione eventi) e cosa escludere o rimandare (come l'app mobile nativa).</li>
+            <li><strong>Conformità GDPR:</strong> Trattando dati medici sensibili di minori (allergie e farmaci), il sistema applica una rigida sicurezza "privacy by design". Gli accessi sono profilati in base al ruolo (RBAC) in modo che ciascun capo possa visualizzare esclusivamente i dati della propria unità, e i server cloud sono localizzati all'interno dell'Unione Europea.</li>
+        </ul>
+
+        <h4>4. Analisi dei Rischi (Risk Management)</h4>
+        <p>Durante la pianificazione è stato redatto un registro dei rischi per anticipare i problemi logistici e infrastrutturali:</p>
+        <ul>
+            <li><strong>Rischio Identificato:</strong> Scarsa o assente connettività internet durante le attività scout e le uscite all'aperto.</li>
+            <li><strong>Strategia di Mitigazione:</strong> Implementazione di una modalità offline per le funzionalità più importanti, come il registro digitale delle presenze dell'unità, con sincronizzazione automatica dei dati sul cloud non appena la connessione torna disponibile.</li>
+        </ul>
+
+        <div class="image-center-container">
+            <img src="immagini/scout.jpg" alt="Attività Scout e Gestione sul Campo" onerror="this.onerror=null; this.src='scout.jpg';">
+        </div>
+    </div>
+    
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

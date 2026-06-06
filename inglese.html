@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglese — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-inglese.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+
+        
+        /* Allargato a 1100px per inserire le immagini lateralmente */
+        .main-container { max-width: 1100px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 1.5rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .quote { font-style: italic; color: #555; border-left: 3px solid var(--accent); padding-left: 1rem; margin-bottom: 2rem; }
+
+        /* STRUTTURA DELLE SEZIONI A DUE COLONNE (FLEXBOX) */
+        .section-row { 
+            display: flex; 
+            gap: 3rem; 
+            align-items: center; 
+            margin-bottom: 3rem; 
+        }
+        .text-block { flex: 1.5; }
+        .image-block { 
+            flex: 1.2; 
+            display: flex;
+            justify-content: center;
+        }
+
+        /* STILE DELLE IMMAGINI (Intere e con ombreggiatura) */
+        .image-block img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 350px; 
+            object-fit: contain; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+        }
+        .image-block img:hover { transform: scale(1.03); }
+
+        /* Responsive per smartphone */
+        @media (max-width: 768px) {
+            .section-row { flex-direction: column !important; gap: 1.5rem; margin-bottom: 2.5rem; }
+            .image-block { width: 100%; }
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="inglese.html" style="color:var(--accent);">Inglese</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>English Language & Literature</h1>
+        <h2>The Victorian Age and Aestheticism</h2>
+    </div>
+<div class="main-container">
+        <a href="area-umanistica.html" class="back-link">&larr; Torna indietro</a>
+
+
+    <div class="main-container">
+        <h2 class="materia-title">Oscar Wilde: Aestheticism and Hypocrisy</h2>
+        <p class="quote">I decided to choose Oscar Wilde and his masterpiece for my exam because I am deeply fascinated by how he used his writing to challenge the strict rules and hypocrisy of Victorian society.</p>
+        
+        <!-- SEZIONE 1: His Life (Testo a sinistra e Foto "wilde" a DESTRA) -->
+        <div class="section-row">
+            <div class="text-block">
+                <h4>His Life: From Triumph to Tragedy</h4>
+                <p>Born in Dublin in 1854, Wilde received an excellent education at Oxford. He established himself in London as a poet, essayist, and an extraordinary playwright, writing comedies such as <em>The Importance of Being Earnest</em>. However, his lifestyle as a flamboyant "dandy" took a dramatic turn in 1895. Due to his homosexual relationship, he was put on trial and convicted of "gross indecency". Sentenced to two years of hard labor, he emerged broken and spent his final years in exile in France, until his death in 1900.</p>
+            </div>
+            <div class="image-block">
+                <!-- Foto di Oscar Wilde con controllo errore automatico -->
+                <img src="immagini/wilde.jpg" alt="Oscar Wilde portrait" onerror="this.onerror=null; this.src='wilde.jpg';">
+            </div>
+        </div>
+        
+        <!-- SEZIONE 2: His Masterpiece (Foto "dorian" a SINISTRA e Testo a destra) -->
+        <div class="section-row" style="flex-direction: row-reverse; margin-top: 2rem;">
+            <div class="text-block">
+                <h4>His Masterpiece: The Picture of Dorian Gray (1890)</h4>
+                <p>The work that best captures Wilde’s aesthetic philosophy is his only novel, <em>The Picture of Dorian Gray</em>. The plot revolves around Dorian, a young man of extraordinary beauty. He expresses a wish to stay young forever, desiring that a portrait painted by his friend alter instead of his own face. Influenced by Lord Henry Wotton, Dorian throws himself into a life of hedonism.</p>
+                <p>While Dorian retains his outward purity, the portrait transforms into a hideous monster, reflecting his corrupt soul and sins. Eventually, overwhelmed by guilt, Dorian stabs the canvas. The spell is broken: the portrait returns to its original beauty, while Dorian dies, instantly transforming into a wrinkled, loathsome old man. This novel serves as the ultimate parable of Aestheticism: art outlives time, whereas physical beauty is destined to fade away.</p>
+            </div>
+            <div class="image-block">
+                <!-- Foto del quadro di Dorian Gray con controllo errore automatico -->
+                <img src="immagini/dorian.jpg" alt="The Picture of Dorian Gray" onerror="this.onerror=null; this.src='dorian.jpg';">
+            </div>
+        </div>
+    </div>
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

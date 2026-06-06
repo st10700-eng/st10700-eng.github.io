@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligenza Artificiale — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-ia.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        
+        .main-container { max-width: 800px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 2rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.8rem; }
+
+        /* STILE PER L'IMMAGINE INIZIALE LUNGA */
+        .banner-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            max-height: 280px; /* Mantiene la foto schiacciata, lunga e panoramica */
+            object-fit: contain; /* Mostra tutta l'immagine senza tagliarla o distorcerla */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ia.html" style="color:var(--accent);">A.I.</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>Intelligenza Artificiale</h1>
+        <h2>Reti Neurali e Visione Artificiale</h2>
+    </div>
+
+<div class="main-container">
+        <a href="area-scientifica.html" class="back-link">&larr; Torna indietro</a>
+
+
+    <div class="main-container">
+        <h2 class="materia-title">Le Reti Neurali Convoluzionali (CNN)</h2>
+        
+        <!-- Contenitore dell'immagine lunga posizionato all'inizio del testo -->
+        <div class="banner-container">
+            <img src="immagini/reti.jpg" alt="Schema delle Reti Neurali Convoluzionali" onerror="this.onerror=null; this.src='reti.jpg';">
+        </div>
+
+        <p>Nel vasto programma affrontato nella materia Intelligenza Artificiale, l'ambito che ha maggiormente catturato il mio interesse è stato senza dubbio quello delle Reti Neurali Convoluzionali (CNN). Sono rimasta incredibilmente affascinata dalla loro straordinaria capacità di analizzare scenari visivi complessi e di identificare oggetti tridimensionali all'interno di immagini digitali.</p>
+        
+        <h4>Analisi Strutturale delle CNN:</h4>
+        <ul>
+            <li><strong>Obiettivo e Origine:</strong> Nascono per superare i limiti strutturali delle reti tradizionali nell'elaborazione di immagini ad alta risoluzione, evitando l'esplosione dei parametri computazionali e riducendo drasticamente il rischio di overfitting.</li>
+            <li><strong>Analisi Gerarchica:</strong> Elaborano l'immagine per livelli progressivi: i primi strati individuano elementi microscopici (bordi e linee), quelli intermedi riconoscono forme geometriche (curve e texture) e gli ultimi identificano l'oggetto nel suo complesso.</li>
+            <li><strong>Strati Convoluzionali:</strong> Utilizzano piccoli filtri chiamati kernel che scorrono sui pixel per catturare le relazioni spaziali ed estrarre le caratteristiche fondamentali, generando le feature map.</li>
+            <li><strong>Strati di Pooling:</strong> Riducono la dimensione delle mappe estrattive per alleggerire il calcolo e risparmiare memoria. Si dividono principalmente in Max Pooling (prende il valore massimo) e Average Pooling (calcola la media).</li>
+            <li><strong>Flatten e Classificazione:</strong> L'operazione di Flatten converte i dati bidimensionali in un vettore lineare. Questo viene inviato a una rete finale che, tramite la funzione Softmax, assegna a ogni classe una probabilità percentuale per identificare l'oggetto.</li>
+        </ul>
+    </div>
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

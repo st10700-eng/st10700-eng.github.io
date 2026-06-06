@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Umanistica — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-light: #f8f9fa; --neutral-dark: #333333; --white: #ffffff; --grey: #e2e8f0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--neutral-light); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/background-umanistiche.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        .main-container { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--accent); text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        .grid-materie { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card-materia { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border: 1px solid var(--grey); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .card-materia:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
+        .card-body { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-body h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 0.8rem; }
+        .card-body p { color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; text-align: justify; flex-grow: 1; }
+        .btn-materia { display: inline-block; background-color: var(--primary); color: var(--white); text-decoration: none; padding: 0.6rem 1rem; border-radius: 4px; text-align: center; font-weight: 500; transition: background 0.3s; }
+        .btn-materia:hover { background-color: var(--accent); }
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="materie.html" style="color:var(--accent);">Materie</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-page">
+        <h1>Area Umanistica e della Salute</h1>
+        <p>Discipline letterarie, storiche, linguistiche e motorie</p>
+    </div>
+
+    <div class="main-container">
+        <a href="materie.html" class="back-link">&larr; Torna alle macro-aree</a>
+        
+        <div class="grid-materie">
+            <!-- 1. ITALIANO -->
+            <div class="card-materia">
+                <div class="card-body">
+                    <h3>Italiano</h3>
+                    <p>Luigi Pirandello: la crisi dell'io del Novecento, il concetto di maschera e la frantumazione dell'identità corporea e sociale.</p>
+                    <a href="italiano.html" class="btn-materia">Apri Contenuto</a>
+                </div>
+            </div>
+
+            <!-- 2. STORIA -->
+            <div class="card-materia">
+                <div class="card-body">
+                    <h3>Storia</h3>
+                    <p>La Prima Guerra Mondiale (1914-1918): le cause politiche, la logorante vita di trincea e i risvolti geopolitici globali.</p>
+                    <a href="storia.html" class="btn-materia">Apri Contenuto</a>
+                </div>
+            </div>
+
+            <!-- 3. INGLESE -->
+            <div class="card-materia">
+                <div class="card-body">
+                    <h3>Inglese</h3>
+                    <p>Oscar Wilde: Aestheticism, the figure of the Dandy and the critique of Victorian hypocrisy in The Picture of Dorian Gray.</p>
+                    <a href="inglese.html" class="btn-materia">Apri Contenuto</a>
+                </div>
+            </div>
+
+            <!-- 4. SCIENZE MOTORIE -->
+            <div class="card-materia">
+                <div class="card-body">
+                    <h3>Scienze Motorie</h3>
+                    <p>Anatomia dell'apparato cardiocircolatorio: struttura interna del cuore, tessuti cardiaci e la dinamica della doppia circolazione.</p>
+                    <a href="scienze-motorie.html" class="btn-materia">Apri Contenuto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

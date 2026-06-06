@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scienze Motorie — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-scienze-motorie.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+
+        
+        /* Allargato a 1100px per accogliere comodamente le immagini sul fianco destro */
+        .main-container { max-width: 1100px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 1.5rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        /* STRUTTURA DELLE SEZIONI A DUE COLONNE */
+        .section-row { 
+            display: flex; 
+            gap: 3rem; 
+            align-items: center; 
+            margin-bottom: 4rem; 
+        }
+        .text-block { flex: 1.5; }
+        .image-block { 
+            flex: 1.2; 
+            display: flex;
+            justify-content: center;
+        }
+
+        /* STILE PER LE IMMAGINI (Intere, non tagliate e ben distanziate) */
+        .image-block img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 350px; 
+            object-fit: contain; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+        }
+        .image-block img:hover { transform: scale(1.03); }
+
+        /* Responsive per smartphone */
+        @media (max-width: 768px) {
+            .section-row { flex-direction: column !important; gap: 1.5rem; margin-bottom: 2.5rem; }
+            .image-block { width: 100%; }
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scienze-motorie.html" style="color:var(--accent);">Scienze Motorie</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>Scienze Motorie</h1>
+        <h2>Anatomia, Fisiologia e Salute dello Sportivo</h2>
+    </div>
+<div class="main-container">
+        <a href="area-umanistica.html" class="back-link">&larr; Torna indietro</a>
+    
+    <div class="main-container">
+        <h2 class="materia-title">Studio dell'Apparato Cardiocircolatorio</h2>
+        
+        <div class="section-row">
+            <div class="text-block">
+                <p>Durante quest'anno, il percorso svolto si è articolato su due macro-argomenti teorici: la tecnologia al servizio dello sport e lo studio dell'apparato cardiocircolatorio. È stato proprio quest'ultimo ad affascinarmi maggiormente, agendo da stimolo per far nascere in me un profondo e inaspettato interesse verso l'anatomia e la fisiologia umana.</p>
+                
+                <h4>1. Il Cuore: Struttura e Anatomia Cavitaria</h4>
+                <p>Il cuore è un organo muscolare cavo situato nel mediastino (lo spazio tra i polmoni) e orientato a sinistra. È diviso verticalmente dal setto cardiaco in due metà indipendenti, formate ciascuna da due camere specifiche (quattro cavità in totale): due atri superiori (ricezione del sangue) e due ventricoli inferiori (pompaggio). La parte destra gestisce il sangue venoso (deossigenato), mentre la sinistra accoglie e distribuisce quello arterioso (ricco di ossigeno). Le valvole assicurano l'unidirezionalità del flusso.</p>
+
+                <h4>2. I Tessuti Cardiaci</h4>
+                <ul>
+                    <li><strong>Pericardio:</strong> Un sacco fibro-sieroso che riveste e protegge l'esterno dell'organo, riducendo gli attriti.</li>
+                    <li><strong>Miocardio:</strong> Il tessuto muscolare vero e proprio, composto da muscolo striato involontario, responsabile delle contrazioni ritmiche.</li>
+                    <li><strong>Endocardio:</strong> Una sottile membrana endoteliale che riveste internamente le cavità cardiache e le valvole.</li>
+                </ul>
+            </div>
+            <div class="image-block">
+                <img src="immagini/cuore.jpg" alt="Anatomia e struttura del Cuore">
+            </div>
+        </div>
+
+        <div class="section-row">
+            <div class="text-block">
+                <h4>3. La Doppia Circolazione</h4>
+                <ul>
+                    <li><strong>Piccola Circolazione (polmonare):</strong> Il ventricolo destro pompa il sangue deossigenato verso i polmoni tramite l'arteria polmonare, dove avviene l'ematosi (scambio gassoso), per poi tornare all'atrio sinistro attraverso le vene polmonari.</li>
+                    <li><strong>Grande Circolazione (sistemica):</strong> Il ventricolo sinistro immette il sangue ossigenato nell'arteria aorta per distribuirlo a tutto l'organismo. Il sangue venoso ritorna infine all'atrio destro mediante le vene cave.</li>
+                </ul>
+            </div>
+            <div class="image-block">
+                <img src="immagini/circolazione.jpg" alt="La doppia circolazione sanguigna">
+            </div>
+        </div>
+
+    </div>
+    
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

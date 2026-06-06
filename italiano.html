@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiano — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-italiano.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+
+
+        
+        .main-container { max-width: 1100px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 1.5rem 0 1rem 0; border-left: 4px solid var(--accent); padding-left: 10px; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        .section-row { 
+            display: flex; 
+            gap: 3rem; 
+            align-items: center; 
+            margin-bottom: 3rem; 
+        }
+        .text-block { flex: 1.5; }
+        .image-block { 
+            flex: 1.2; 
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .image-block img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 350px; 
+            object-fit: contain; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+        }
+        .image-block img:hover { transform: scale(1.03); }
+
+        @media (max-width: 768px) {
+            .section-row { flex-direction: column !important; gap: 1.5rem; margin-bottom: 2.5rem; }
+            .image-block { width: 100%; }
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="italiano.html" style="color:var(--accent);">Italiano</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="header-page">
+        <h1>Italiano</h1>
+        <h2>Letteratura a cavallo tra Ottocento e Novecento</h2>
+    </div>
+<div class="main-container">
+        <a href="area-umanistica.html" class="back-link">&larr; Torna indietro</a>
+    
+    <div class="main-container">
+        <h2 class="materia-title">Gabriele D'Annunzio: L'Estetismo e il Panismo</h2>
+        
+        <p>Nel percorso di letteratura italiana svolto durante il quinto anno, lo studio di Gabriele D'Annunzio ha rappresentato un momento fondamentale per analizzare la risposta artistica alla crisi dell'uomo moderno. In un'epoca dominata dal progresso industriale e dalla razionalità scientifica, D'Annunzio reagisce rifiutando la banalità quotidiana attraverso l'esaltazione della bellezza, dell'arte e dell'istinto puro.</p>
+        
+        <p>L'introduzione di D'Annunzio consente di esplorare il contrasto tra l'ascesa della società di massa e il disperato tentativo dell'intellettuale di distinguersi da essa. Portare questo autore permette di riflettere su come la letteratura del periodo abbia cercato di ridefinire il ruolo dell'uomo e dell'artista, oscillando tra il desiderio di dominare la realtà e l'inevitabile scoperta della propria fragilità interiore.</p>
+
+        <!-- SEZIONE 1: Cenni sulla Vita -->
+        <div class="section-row">
+            <div class="text-block">
+                <h4>Cenni sulla Vita (1863 – 1938)</h4>
+                <p>La biografia di D'Annunzio incarna l'ideale del "vivere inimitabile", in cui arte e azione politica si fondono continuamente:</p>
+                <ul>
+                    <li><strong>Il periodo romano:</strong> Nato a Pescara, si inserisce giovanissimo nei salotti mondani di Roma, conducendo una vita sfarzosa e aristocratica da dandy raffinato, durante la quale compone il suo primo grande romanzo.</li>
+                    <li><strong>Il Superuomo e l'amore con la Duse:</strong> Influenzato dal pensiero di Nietzsche, elabora il mito del Superuomo, un individuo superiore destinato ad affermarsi tramite l'estetica e l'action. In Toscana vive una travolgente relazione con l'attrice Eleonora Duse, sua musa ispiratrice per le raccolte poetiche più celebri.</li>
+                    <li><strong>L'azione militare e gli ultimi anni:</strong> Interventista nella Prima Guerra Mondiale, partecipa a imprese clamorose come il Volo su Vienna. Nel dopoguerra guida l'occupazione della città di Fiume. Conclude i suoi giorni nel monumentale isolamento della villa del Vittoriale degli Italiani.</li>
+                </ul>
+            </div>
+            <div class="image-block">
+                <img src="immagini/DAnnunzio.jpg" alt="Ritratto e imprese di Gabriele D'Annunzio">
+            </div>
+        </div>
+
+        <h4>Il Piacere (1889) — Il Manifesto dell'Estetismo</h4>
+        <p>Il romanzo introduce in Italia la figura dell'esteta attraverso le vicende del protagonista, Andrea Sperelli, un nobile intellettuale guidato dalla massima di fare della propria vita un'opera d'arte. Andrea vive diviso tra l'attrazione per due donne opposte: Elena Muti, sensuale e distruttiva, e Maria Ferres, pura e spirituale. Il suo tentativo di sostituire Elena nei propri pensieri fallisce miseramente, lasciandolo solo, svuotato e sconfitto. L'opera non celebra l'esteta, ma ne descrive il fallimento morale e l'incapacità di relazionarsi con la realtà autentica.</p>
+
+        <!-- SEZIONE 2: Alcyone e Panismo -->
+        <div class="section-row" style="flex-direction: row-reverse; margin-top: 2.5rem;">
+            <div class="text-block">
+                <h4>Alcyone (1903) — Il Capolavoro Poetico e il Panismo</h4>
+                <p>Considerato il vertice della lirica dannunziana, il terzo libro delle <i>Laudi</i> descrive una ideale estate trascorsa in Toscana. Il tema centrale è il <strong>Panismo</strong>, ovvero la fusione totale ed estatica dell'essere umano con gli elementi della natura. L'identità dell'uomo si dissolve nel paesaggio circostante, concetto espresso magistralmente nella celebre poesia <i>"La Pioggia nel Pineto"</i>, dove i corpi del poeta e della donna amata (Ermione) si trasformano gradualmente in creature vegetali. In quest'opera il poeta, grazie alla sua sensibilità superiore, si fa interprete e tramite dei segreti nascosti della natura.</p>
+            </div>
+            <div class="image-block">
+                <!-- TENTATIVO 1: Cerca nella cartella immagini -->
+                <img src="immagini/alcyone.jpg" alt="Foto da cartella immagini" onerror="this.style.display='none'; document.getElementById('backup-img').style.display='block';">
+                
+                <!-- TENTATIVO 2 (Invisibile all'inizio): Cerca nella cartella principale se il primo fallisce -->
+                <img id="backup-img" src="alcyone.jpg" alt="Rappresentazione poetica di Alcyone" style="display:none;">
+            </div>
+        </div>
+
+    </div>
+    
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

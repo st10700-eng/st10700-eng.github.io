@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi e Reti — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-sistemi-reti.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+
+
+        
+        .main-container { max-width: 1100px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 1.5rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+
+        /* STRUTTURA DELLE SEZIONI (FLEXBOX) */
+        .section-row { 
+            display: flex; 
+            gap: 3rem; 
+            align-items: center; 
+            margin-bottom: 4rem; 
+        }
+        .text-block { flex: 1.5; }
+        .image-block { 
+            flex: 1.2; 
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Mostra tutta l'immagine senza tagliare i lati */
+        .image-block img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 350px; 
+            object-fit: contain; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            transition: transform 0.3s;
+            background-color: transparent; 
+        }
+        .image-block img:hover { transform: scale(1.03); }
+
+        /* Responsive per schermi piccoli (smartphone) */
+        @media (max-width: 768px) {
+            .section-row { flex-direction: column !important; gap: 1.5rem; margin-bottom: 2.5rem; }
+            .image-block { width: 100%; }
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sistemi-reti.html" style="color:var(--accent);">Sistemi e Reti</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>Sistemi e Reti</h1>
+        <h2>Sicurezza Informatica e Protocolli di Rete</h2>
+    </div>
+    <div class="main-container">
+        <a href="area-scientifica.html" class="back-link">&larr; Torna indietro</a>
+
+    <div class="main-container">
+        <h2 class="materia-title">La sicurezza nei trasferimenti dati: Protocolli SSL e TLS</h2>
+        
+        <div class="section-row">
+            <div class="text-block">
+                <p>Nello studio di Sistemi e Reti, l'integrazione tra l'apprendimento teorico è stata fondamentale per comprendere a fondo le architetture di rete. Tra i vari temi trattati, la protezione dei dati in rete costituita dai protocolli crittografici SSL e TLS ha suscitato in me un interesse particolare: mi ha infatti permesso di analizzare dal punto di vista tecnico e approfondire uno strumento informatico fondamentale nell'uso quotidiano.</p>
+                
+                <h4>Il contesto tecnologico: dalla navigazione in chiaro alla cifratura</h4>
+                <p>In passato, le comunicazioni sul web avvenivano tramite il protocollo HTTP, che trasmetteva i dati interamente in chiaro ed esponeva gli utenti al costante rischio di intercettazione di informazioni sensibili, come password e dati finanziari. Per risolvere questa vulnerabilità, è stata introdotta la cifratura end-to-end, un sistema capace di proteggere e rendere riservati i dati durante tutto il percorso dal browser al server.</p>
+
+                <h4>L'evoluzione dai protocolli SSL al moderno standard TLS</h4>
+                <ol>
+                    <li><strong>SSL (Secure Sockets Layer):</strong> Introdotto negli anni '90 da Netscape, ha dato il via alla sicurezza del commercio online. A causa di gravi falle strutturali (attacchi POODLE e BEAST), è stato dichiarato obsoleto e abbandonato ufficialmente nel 2015.</li>
+                </ol>
+            </div>
+            <div class="image-block">
+                <img src="immagini/ssl.png" alt="ssl">
+            </div>
+        </div>
+
+        <div class="section-row" style="flex-direction: row-reverse;">
+            <div class="text-block">
+                <ol start="2">
+                    <li><strong>TLS (Transport Layer Security):</strong> Sviluppato dall'IETF come evoluzione matura e standardizzata. Oggi vede una diffusione capillare di TLS 1.2 e l'adozione raccomandata di TLS 1.3, che ottimizza sia la sicurezza che le prestazioni.</li>
+                </ol>
+                
+                <h4>I tre pilastri della sicurezza informatica garantiti da TLS</h4>
+                <ul>
+                    <li><strong>Riservatezza (Cifratura):</strong> I dati in transito vengono trasformati in un codice illeggibile intercettabile ma non decodificabile senza le specifiche chiavi matematiche.</li>
+                    <li><strong>Integrità dei dati:</strong> Garantisce che il messaggio arrivi a destinazione esattamente come è stato spedito. Se viene modificato anche un solo bit, il protocollo interrompe la connessione.</li>
+                    <li><strong>Autenticazione univoca:</strong> Certifica l'identità del server remoto tramite i certificati digitali emessi dalle Autorità di Certificazione (CA), impedendo il phishing.</li>
+                </ul>
+            </div>
+            <div class="image-block">
+                <img src="immagini/TLS.WEBP" alt="tls">
+            </div>
+        </div>
+
+        <div class="section-row">
+            <div class="text-block">
+                <h4>Il meccanismo di Handshake TLS</h4>
+                <p>La sessione si apre con l'handshake (stretta di mano), un dialogo invisibile in cui client e server stabiliscono la versione comune del protocollo, verificano l'autenticità del certificato digitale tramite la Trust Chain e concordano la chiave simmetrica temporanea per cifrare i dati. Con TLS 1.3 l'intero scambio richiede un unico ciclo di andata e ritorno (1-RTT).</p>
+            </div>
+            <div class="image-block">
+                <img src="immagini/handshake.png" alt="Meccanismo TLS Handshake">
+            </div>
+        </div>
+
+    </div>
+    
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatica — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-informatica.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        
+        .main-container { max-width: 800px; margin: 3rem auto; padding: 0 2rem; }
+        .back-link { display: inline-block; text-decoration: none; color: var(--primary); font-weight: 600; margin-bottom: 2rem; transition: color 0.3s; }
+        .back-link:hover { color: var(--accent); }
+        
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h3 { font-size: 1.6rem; color: #2c3e50; margin: 2.5rem 0 1rem 0; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 2rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.8rem; text-align: justify; }
+        
+        /* Stile personalizzato per l'immagine del progetto */
+        .project-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="informatica.html" style="color:var(--accent);">Informatica</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-page">
+        <h1>Informatica</h1>
+        <h2>Sviluppo Backend e Gestione dei Dati</h2>
+    </div>
+
+    <div class="main-container">
+        <a href="area-scientifica.html" class="back-link">&larr; Torna indietro</a>
+
+        <h2 class="materia-title">Progettazione Database e Sviluppo Software</h2>
+        <p>Durante il quinto anno, l'insegnamento dell'Informatica si è concentrato principalmente sulla progettazione avanzata di database relazionali e non relazionali, sullo sviluppo di applicazioni web moderne e sullo integration di architetture client-server sicure. Grande attenzione è stata data alla strutturazione del backend tramite linguaggi di programmazione robusti.</p>
+        
+        <h3>Il mio Progetto: Applicazione "Chat Room"</h3>
+        
+        <img src="immagini/chatroom.png" alt="Anteprima applicazione Chat Room" class="project-img">
+
+        <p>Chat Room è un'applicazione interattiva progettata per consentire agli utenti di autenticarsi in modo sicuro, accedere a una bacheca principale (Dashboard) e comunicare all'interno della piattaforma. L'obiettivo principale dell'applicazione è garantire la sicurezza dei dati, l'integrità delle sessioni utente e un'interfaccia grafica fluida e intuitiva (sviluppata tramite il framework CSS Bulma).</p>
+
+        <h4>Flusso di Funzionamento e Moduli Principali</h4>
+        <p>L'applicazione si articola su cinque moduli fondamentali, ognuno con una precisa responsabilità:</p>
+        <ul>
+            <li><strong>Registrazione:</strong> Permette ai nuovi utenti di creare un account. Per garantire la sicurezza, la password inserita non viene mai salvata in chiaro, ma viene cifrata tramite algoritmi di hashing sicuri prima di essere memorizzata nel database.</li>
+            <li><strong>Login:</strong> Gestisce l'autenticazione. Il sistema verifica la presenza dello username e, tramite funzioni crittografiche di verifica, confronta la password inserita con l'hash memorizzato. Se il controllo va a buon fine, viene avviata una sessione protetta.</li>
+            <li><strong>Dashboard:</strong> Rappresenta il fulcro dell'applicazione, l'area riservata visibile solo agli utenti autenticati. Qui l'utente può visualizzare i messaggi esistenti e l'elenco delle stanze o delle chat attive.</li>
+            <li><strong>Crea:</strong> È il modulo che permette l'invio dei messaggi o la creazione di nuove stanze di discussione. Gestisce l'inserimento dei dati nel database associandoli all'utente correntemente loggato.</li>
+            <li><strong>Logout:</strong> Consente di terminare la sessione in modo sicuro, distruggendo i dati temporanei del server e reindirizzando l'utente alla pagina di login, impedendo accessi non autorizzati da parte di terzi dallo stesso dispositivo.</li>
+        </ul>
+
+        <h4>I Pilastri Informatici della Sicurezza</h4>
+        <p>Il funzionamento del sistema si basa su due pilastri informatici fondamentali che ne garantiscono la stabilità e l'affidabilità:</p>
+        <ul>
+            <li><strong>Gestione dello Stato tramite Sessioni:</strong> Poiché il protocollo HTTP è <em>stateless</em> (non mantiene memoria delle richieste precedenti), viene utilizzato lo strumento delle <strong>Sessioni PHP</strong>. Una volta eseguito il login, il server assegna un ID di sessione univoco al client. Questo permette di verificare in ogni pagina (come la Dashboard) che l'utente sia realmente autorizzato a visualizzare i contenuti.</li>
+            <li><strong>Protezione contro gli Attacchi SQL Injection:</strong> Nel backend, l'interazione con il database avviene tramite i <strong>Prepared Statements</strong> (Query Preparate). Questo metodo separa nettamente le istruzioni SQL dai dati inseriti dall'utente, neutralizzando i tentativi di injection.</li>
+            <li><strong>Sicurezza delle Password:</strong> Viene implementato l'hashing moderno, che trasforma la password in una stringa irreversibile, rendendo i dati protetti anche in caso di accesso non autorizzato al database.</li>
+        </ul>
+    </div>
+
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

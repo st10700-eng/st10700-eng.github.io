@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematica — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-dark: #333333; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/materia-matematica.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+
+
+        
+        .main-container { max-width: 800px; margin: 3rem auto; padding: 0 2rem; }
+        .materia-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+        h4 { font-size: 1.3rem; color: #2c3e50; margin: 2rem 0 1rem 0; }
+        p { text-align: justify; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+        li { margin-bottom: 0.5rem; }
+        .formula-box { background: #edf2f7; padding: 1rem; border-left: 4px solid var(--accent); font-family: 'Courier New', Courier, monospace; margin: 1rem 0; font-weight: bold; font-size: 1.2rem; border-radius: 0 4px 4px 0; }
+        
+        /* STILE PER IL GIF INIZIALE LUNGO */
+        .gif-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            max-height: 280px; /* Altezza bilanciata per mantenerlo lungo e panoramico */
+            object-fit: contain; /* Mostra tutta l'immagine senza tagliarla */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="matematica.html" style="color:var(--accent);">Matematica</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-page">
+        <h1>Matematica</h1>
+        <h2>Analisi Matematica e Calcolo Integrale</h2>
+    </div>
+
+<div class="main-container">
+        <a href="area-scientifica.html" class="back-link">&larr; Torna indietro</a>
+
+
+    <div class="main-container">
+        <h2 class="materia-title">Lo Studio degli Integrali</h2>
+        
+        <!-- Contenitore della GIF inserito all'inizio del testo -->
+        <div class="gif-container">
+            <img src="immagini/integrale.gif" alt="Animazione sul concetto di integrale">
+        </div>
+
+        <p>Quest'anno la matematica è stata molto diversa: si è basata meno sulla memoria e sulle formule e molto più sul ragionamento. L'argomento principale che abbiamo trattato è stato quello degli integrali. All'inizio ho trovato questo argomento molto difficile, ed è proprio per questo che ho scelto di approfondirlo.</p>
+        
+        <h4>1. L'Integrale Definito (Calcolare le aree)</h4>
+        <p>L'integrale definito serve a calcolare l'area della superficie compresa tra il disegno di una funzione (la curva) e l'asse orizzontale x, in un certo intervallo [a, b]. Le aree che si trovano sopra l'asse x si contano como positive, mentre quelle sotto come negative. Per fare questo calcolo si usa il Teorema Fondamentale del Calcolo:</p>
+        <div class="formula-box">∫ₐᵇ f(x) dx = F(b) − F(a)</div>
+        
+        <h4>2. L'Integrale Indefinito (Trovare la funzione di partenza)</h4>
+        <p>L'integrale indefinito è l'operazione contraria della derivata. Data una funzione, lo scopo è trovare la sua funzione di partenza, chiamata primitiva. La formula generale è:</p>
+        <div class="formula-box">∫ f(x) dx = F(x) + C</div>
+        <p>La C (costante di integrazione) si mette sempre perché tutte le funzioni che differiscono solo per un numero costante hanno la stessa identica derivata.</p>
+
+        <h4>3. L'Integrale Improprio (Intervalli o funzioni infinite)</h4>
+        <p>Un integrale si dice improprio quando saltano le regole normali perché c'è qualcosa di infinito. Ci sono due casi:</p>
+        <ul>
+            <li><strong>Tipo 1 (Spazio infinito):</strong> Quando l'intervallo arriva fino a più o meno infinito (es. da un numero fino a +∞).</li>
+            <li><strong>Tipo 2 (Funzione infinita):</strong> Quando la funzione in un punto schizza verso l'alto o verso il basso all'infinito (presenza di un asintoto verticale).</li>
+        </ul>
+        <p>In questi casi il calcolo si fa usando i limiti. Il risultato determina il carattere dell'integrale: <em>Converge</em> (se esce un numero fisso e l'area è finita), <em>Diverge</em> (se il risultato è infinito) o <em>Indeterminato</em>.</p>
+    </div>
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educazione Civica — Jakia Sultana</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --neutral-dark: #333333;
+            --neutral-light: #fdfefe;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--white); }
+        
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/edcivica-cittadinanza-digitale.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        .header-page h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        
+        .main-container { max-width: 1000px; margin: 3rem auto; padding: 0 2rem; }
+        
+        .section-block { margin-bottom: 4rem; display: flex; flex-direction: column; gap: 1.5rem; }
+        .section-block img { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+        .section-block h2 { color: var(--primary); font-size: 2rem; border-left: 5px solid var(--accent); padding-left: 1rem; }
+        .section-block p { font-size: 1.1rem; text-align: justify; color: #4a5568; }
+        
+        .section-block ul { margin-left: 2rem; font-size: 1.1rem; color: #4a5568; }
+        .section-block li { margin-bottom: 0.8rem; text-align: justify; }
+        .section-block blockquote { 
+            font-style: italic; 
+            background: #f8f9fa; 
+            border-left: 4px solid var(--primary); 
+            padding: 1rem; 
+            margin: 0.5rem 0;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="materie.html">Materie</a></li>
+                <li><a href="educazione-civica.html" style="color:var(--accent);">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-page">
+        <h1>Educazione Civica</h1>
+        <p>Percorso Interdisciplinare sulla Cittadinanza Digitale Consapevole</p>
+    </div>
+
+    <div class="main-container">
+
+        <!-- Introduzione -->
+        <div class="section-block">
+            <h2>Libertà di Informazione: Dal Fascismo al Cyberspazio</h2>
+            <p>Il controllo dell'informazione è da sempre la forma più alta di potere. Che si tratti di censura cartacea nel 1925 o di database digitali oggi, chi controls ciò che conosciamo controlla la nostra libertà. L'Educazione Civica ci insegna che la democrazia va difesa sia dalle vecchie censure che dalle moderne minacce informatiche.</p>
+        </div>
+
+        <!-- Modulo 1 -->
+        <div class="section-block">
+            <img src="immagini/attacchi.jpg" alt="Propaganda fascista">
+            <h2>1. Il Ventennio Fascista e il Monopolio della Verità</h2>
+            <p>Durante il regime, l'Italia visse la "sincronizzazione dei media" guidata da Mussolini.</p>
+            <ul>
+                <li><strong>Le "Veline" e il MinCulPop:</strong> Il Ministero della Cultura Popolare imponeva la censura attraverso ordini segreti (le veline), vietando la cronaca nera e i fallimenti per mostrare un'Italia perfetta.</li>
+                <li><strong>La Realtà Alterata:</strong> Radio e cinegiornali Luce manipolavano la percezione pubblica per costruire un consenso forzato, trasformando i cittadini in sudditi privi di spirito critico.</li>
+            </ul>
+        </div>
+
+        <!-- Modulo 2 -->
+        <div class="section-block">
+            <h2>2. L'Articolo 21 della Costituzione come Scudo</h2>
+            <p>Dopo la guerra, i Padri Costituenti hanno blindato la libertà di espressione con l'Articolo 21:</p>
+            <blockquote>
+                «Tutti hanno diritto di manifestare liberamente il proprio pensiero con la parola, lo scritto e ogni altro mezzo di diffusione...»
+            </blockquote>
+            <p>Questo articolo garantisce il pluralismo (voci diverse contro il pensiero unico) e il diritto di essere informati per partecipare alla vita pubblica. Oggi, con l'abbondanza di fonti online, lo spirito critico è il nostro unico strumento per distinguere il vero dal falso ed evitare nuove propagande.</p>
+        </div>
+
+        <!-- Modulo 3 -->
+        <div class="section-block">
+            <img src="immagini/fake.png" alt="Cyber-sicurezza e minacce digitali">
+            <h2>3. La Nuova Frontiera: Cyber-sicurezza e Attacchi "Extreme"</h2>
+            <p>Oggi il terreno di scontro si è spostato nel cyberspazio. Il Rapporto Clusit evidenzia un'escalation di attacchi informatici classificati come "Extreme":</p>
+            <ul>
+                <li><strong>Disinformazione e IA:</strong> L'Intelligenza Artificiale crea fake news sofisticate, capaci di adattarsi algoritmicamente ai gusti del singolo utente per manipolarlo.</li>
+                <li><strong>Attacchi alle Infrastrutture:</strong> I cyber-criminali bloccano ospedali, banche e trasporti. La sicurezza dei dati è ormai una questione di sicurezza nazionale e libertà personale.</li>
+            </ul>
+        </div>
+
+        <!-- Modulo 4 -->
+        <div class="section-block">
+            <h2>4. Il Data Breach e la Trasparenza Democratica</h2>
+            <p>La violazione dei dati personali (Data Breach) è l'equivalente moderno di un attack alla nostra indipendenza. Non è un semplice guasto tecnico: perdere i propri dati ci rende vulnerabili a ricatti e manipolazioni.</p>
+            <p>A tutela dei cittadini, il Garante della Privacy impone alle aziende l'obbligo di notifica entro 72 ore in caso di attacco. Questo principio di trasparenza democratica dimostra che l'occultamento e il silenzio sarebbero un danno maggiore per la collettività rispetto alla comunicazione della falla stessa.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jakia Sultana — Percorso di Educazione Civica</p>
+    </footer>
+
+</body>
+</html>

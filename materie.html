@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aree Esame — Jakia Sultana</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --neutral-light: #f8f9fa; --neutral-dark: #333333; --white: #ffffff; --grey: #e2e8f0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--neutral-dark); line-height: 1.6; background-color: var(--neutral-light); }
+        nav { background: var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { color: var(--white); font-weight: bold; font-size: 1.4rem; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .header-page { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)), url('immagini/background-materie.jpg') no-repeat center center/cover; padding: 5rem 2rem; color: var(--white); text-align: center; }
+        .main-container { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+        
+        /* Griglia forzata a due colonne su PC */
+        .grid-aree { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        
+        /* Struttura Card */
+        .card-area { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border: 1px solid var(--grey); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .card-area:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
+        
+        /* Contenitore per l'immagine (evita il testo rotto se manca la foto) */
+        .card-image-wrapper { width: 100%; height: 220px; background-color: #eaeaea; overflow: hidden; position: relative; }
+        .card-banner { width: 100%; height: 100%; object-fit: cover; }
+        
+        .card-body { padding: 2.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-body h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem; }
+        .card-body p { color: #666; font-size: 1rem; margin-bottom: 2rem; text-align: justify; flex-grow: 1; min-height: 75px; }
+        
+        .btn-area { display: inline-block; background-color: var(--primary); color: var(--white); text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 4px; text-align: center; font-weight: 500; transition: background 0.3s; margin-top: auto; }
+        .btn-area:hover { background-color: var(--accent); }
+        
+        footer { background: var(--primary); color: var(--white); padding: 2rem; text-align: center; margin-top: 5rem; }
+
+        /* Responsive per Tablet e Smartphone */
+        @media (max-width: 768px) {
+            .grid-aree { grid-template-columns: 1fr; }
+            .card-image-wrapper { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jakia Sultana</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="materie.html" style="color:var(--accent);">Materie</a></li>
+                <li><a href="educazione-civica.html">Educazione Civica</a></li>
+                <li><a href="FSL.html">FSL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header-page">
+        <h1>Mappa dei Contenuti</h1>
+        <p>Esplora le discipline d'esame divise per macro-aree d'apprendimento</p>
+    </div>
+
+    <div class="main-container">
+        <div class="grid-aree">
+            <!-- AREA SCIENTIFICA -->
+            <div class="card-area">
+                <div class="card-image-wrapper">
+                    <img src="immagini/area-scientifica.webp" alt="Area Scientifica" class="card-banner">
+                </div>
+                <div class="card-body">
+                    <h3>Area Scientifica e Tecnologica</h3>
+                    <p>Contiene le discipline tecniche d'indirizzo informatico, l'intelligenza artificiale e l'analisi matematica svolte durante l'ultimo anno.</p>
+                    <a href="area-scientifica.html" class="btn-area">Esplora le 6 Materie</a>
+                </div>
+            </div>
+            
+            <!-- AREA UMANISTICA -->
+            <div class="card-area">
+                <div class="card-image-wrapper">
+                    <img src="immagini/area-umanistica.jpg" alt="Area Umanistica" class="card-banner">
+                </div>
+                <div class="card-body">
+                    <h3>Area Umanistica e della Salute</h3>
+                    <p>Raccoglie i percorsi di letteratura italiana, storia contemporanea, lingua inglese e l'approfondimento anatomico di scienze motorie.</p>
+                    <a href="area-umanistica.html" class="btn-area">Esplora le 4 Materie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Jakia Sultana — IIS Marconi Pieralisi Jesi</p></footer>
+</body>
+</html>
